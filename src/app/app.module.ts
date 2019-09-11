@@ -4,12 +4,19 @@ import { RouterModule } from "@angular/router";
 import { HeroComponent } from "./hero/hero.component";
 
 import { AppComponent } from "./app.component";
+import { NgZorroAntdModule } from "ng-zorro-antd";
+import { FormsModule } from "@angular/forms";
 
 const Routes = [{ path: "", component: HeroComponent }];
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, HeroComponent, RouterModule.forRoot(Routes)],
+  declarations: [AppComponent, HeroComponent],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(Routes),
+    NgZorroAntdModule,
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
