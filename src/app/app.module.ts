@@ -2,9 +2,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { HeroComponent } from "./hero/hero.component";
-
-import { AppComponent } from "./app.component";
 import { NgZorroAntdModule } from "ng-zorro-antd";
+import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
 
 const Routes = [{ path: "", component: HeroComponent }];
@@ -13,9 +12,9 @@ const Routes = [{ path: "", component: HeroComponent }];
   declarations: [AppComponent, HeroComponent],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(Routes),
-    NgZorroAntdModule,
-    FormsModule
+    NgZorroAntdModule
   ],
   providers: [],
   bootstrap: [AppComponent]
