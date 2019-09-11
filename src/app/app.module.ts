@@ -5,11 +5,16 @@ import { HeroComponent } from "./hero/hero.component";
 import { NgZorroAntdModule } from "ng-zorro-antd";
 import { AppComponent } from "./app.component";
 import { FormsModule } from "@angular/forms";
+import { ListComponent } from "./list/list.component";
 
-const Routes = [{ path: "", component: HeroComponent }];
+const Routes = [
+  { path: "", component: HeroComponent },
+  { path: "hero", component: HeroComponent },
+  { path: "list", component: ListComponent }
+];
 
 @NgModule({
-  declarations: [AppComponent, HeroComponent],
+  declarations: [AppComponent, HeroComponent, ListComponent],
   imports: [
     BrowserModule,
     FormsModule,
